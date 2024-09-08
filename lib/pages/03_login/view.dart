@@ -107,9 +107,9 @@ class _LoginViewState extends State<LoginView> {
                       );
                     } else {
                       return AppButton(
-                        label: 'Login',
+                        label: 'Login',fontColor: Theme.of(context).colorScheme.onPrimary,
                         borderRadius: 1000,
-                        onPress: () {
+                        onPressed: () {
                           cubit.postData();
                         },
                       );

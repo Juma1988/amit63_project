@@ -1,4 +1,4 @@
-import 'package:app/core/design/image2.dart';
+import 'package:app/core/design/image.dart';
 import 'package:app/core/design/navigator.dart';
 import 'package:flutter/material.dart';
 
@@ -126,7 +126,7 @@ class _interestedInPageState extends State<interestedInPage> {
           children: [
             Container(
               alignment: AlignmentDirectional.topStart,
-              child: AppImage2(
+              child: AppImage(
                 isSelected ? activePath : unActivePath,
               ),
             ),

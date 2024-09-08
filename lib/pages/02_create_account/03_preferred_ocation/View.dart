@@ -1,4 +1,4 @@
-import 'package:app/core/design/app_navigator.dart';
+import 'package:app/core/design/navigator.dart';
 import 'package:app/main.dart';
 import 'package:app/pages/02_create_account/04_set_up_completed/View.dart';
 import 'package:flutter/material.dart';

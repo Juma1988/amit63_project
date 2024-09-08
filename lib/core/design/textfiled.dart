@@ -12,6 +12,7 @@ class AppTextField extends StatefulWidget {
   final int maxLines;
   final PrefixType prefixType;
   final TextStyle? style;
+  final FloatingLabelBehavior float;
   final String? Function(String? value)? validator;
 
   const AppTextField({
@@ -26,6 +27,7 @@ class AppTextField extends StatefulWidget {
     this.isFormatter = false,
     this.style,
     this.validator,
+    this.float = FloatingLabelBehavior.auto,
   });
 
   @override
@@ -38,21 +40,18 @@ class _AppTextFieldState extends State<AppTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      onTapOutside: (event) {
-        setState(() {
-          FocusManager.instance.primaryFocus?.unfocus();
-        });
-      },
+      onTapOutside: (event) {setState(() {FocusManager.instance.primaryFocus?.unfocus();});},
       keyboardType: widget.keyboardType,
       maxLines: widget.maxLines,
       obscuringCharacter: "*",
       validator: widget.validator,
       obscureText: isHidden && widget.isPassword,
       decoration: InputDecoration(
+        floatingLabelBehavior: widget.float,
         hintText: widget.hint,
         labelText: widget.label,
         labelStyle: TextStyle(
-          color: Color(0xFF9CA3AF),
+          color: Color(0xFF9CA3AF)
         ),
         filled: true,
         fillColor: Color(0xFFD1D5DB).withOpacity(0.1),

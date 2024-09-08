@@ -9,9 +9,13 @@ class TestView extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Color(0xFFfef6f1),
           child: AppImage(
-              'https://miro.medium.com/v2/resize:fit:6000/1*7KI_xHL9JPUDDRMEdKbOGQ.png'),
+            'https://miro.medium.com/v2/resize:fit:6000/1*7KI_xHL9JPUDDRMEdKbOGQ.png',
+            width: double.infinity,
+            height: double.infinity,
+            fit: BoxFit.fitWidth,
+          ),
+          color: Color(0xFFfef6f1),
         ),
       ),
     );

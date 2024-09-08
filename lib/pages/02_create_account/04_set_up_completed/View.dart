@@ -1,6 +1,5 @@
-import 'package:app/core/design/app_image.dart';
-import 'package:app/main.dart';
-import 'package:app/pages/05_home_screen/view.dart';
+
+import 'package:app/core/design/image.dart';
 import 'package:flutter/material.dart';
 
 class AccountSetupCompletedPage extends StatelessWidget {
@@ -51,14 +50,9 @@ class AccountSetupCompletedPage extends StatelessWidget {
                     minimumSize: Size(double.infinity, 48),
                     backgroundColor: Theme.of(context).colorScheme.primary,
                     foregroundColor: Colors.white,
-
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                HomePageView()));
+                    //todo Go to home
                   },
                   child: Text('Get Started'))
             ])),
