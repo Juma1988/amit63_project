@@ -19,7 +19,7 @@ class _RecentJobPageState extends State<_RecentJobPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Suggested Job',
+              'Recent Job',
               style: TextStyle(
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w500,
@@ -100,7 +100,7 @@ class _RecentJobPageState extends State<_RecentJobPage> {
                       icon: Icon(
                         Icons.save,
                         size: 24,
-                        color: isSaved2 ? Colors.blue : Colors.black,
+                        color: isSaved2 ? Colors.blue : Colors.grey,
                       ),
                     )
                   ],
@@ -141,7 +141,7 @@ class _RecentJobPageState extends State<_RecentJobPage> {
                           child: Text(
                             'Remote', // todo get the work type
                             style: TextStyle(
-                                color: Color(0xff4e7bfe),
+                                color: Theme.of(context).colorScheme.primary,
                                 fontSize: 12.sp,
                                 fontWeight: FontWeight.w400),
                           ),
@@ -158,7 +158,7 @@ class _RecentJobPageState extends State<_RecentJobPage> {
                           child: Text(
                             'Senior', // todo get the work type
                             style: TextStyle(
-                                color: Color(0xff4e7bfe),
+                                color: Theme.of(context).colorScheme.primary,
                                 fontSize: 12.sp,
                                 fontWeight: FontWeight.w400),
                           ),
@@ -174,14 +174,14 @@ class _RecentJobPageState extends State<_RecentJobPage> {
                             style: TextStyle(
                                 color: Color(0xFF2E8E18),
                                 fontWeight: FontWeight.w500,
-                                fontSize: 18),
+                                fontSize: 18.sp),
                           ),
                           Text(
                             '/Month',
                             style: TextStyle(
                                 color: Color(0xFF6B7280),
                                 fontWeight: FontWeight.w500,
-                                fontSize: 18),
+                                fontSize: 10.sp),
                           ),
                         ],
                       )

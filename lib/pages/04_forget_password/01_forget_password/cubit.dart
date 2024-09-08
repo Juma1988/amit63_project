@@ -15,7 +15,7 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordStates> {
   Future<void> postData() async {
     emit(ForgetPasswordLoadingState());
     final response =
-        await dio.post('/auth/otp', data: {'email': emailController.text});
+        await dio.post('auth/otp', data: {'email': emailController.text});
 
     if (response.isSuccess) {
       AppGoto(TestView());

@@ -26,9 +26,8 @@ class _HomePageViewState extends State<HomePageView> {
         currentIndex: selectedIndex,
         onTap: (index) {
           selectedIndex = index;
-          setState(() {});
-        },
-        items: List.generate(
+          setState(() {});},
+         items: List.generate(
           icons3.length,
           (index) => BottomNavigationBarItem(
               icon: Icon(icons3[index]),

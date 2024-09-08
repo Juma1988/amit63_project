@@ -17,7 +17,7 @@ class LoginCubit extends Cubit<LoginStates> {
 
   Future<void> postData() async {
     emit(LoginLoadingState());
-    final response = await dio.post('/auth/login', data: {
+    final response = await dio.post('auth/login', data: {
       'email': emailController.text,
       'password': passwordController.text
     });

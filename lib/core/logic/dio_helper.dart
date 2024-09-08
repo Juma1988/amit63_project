@@ -11,11 +11,11 @@ class DioHelper {
   final _dio = Dio(
     BaseOptions(
       //baseUrl: "https://rickandmortyapi.com/api/",
-      baseUrl: "https://project2.amit-learning.com/api",
+      baseUrl: "https://project2.amit-learning.com/api/",
       headers: {
         "Accept": "application/json",
         'Content-Type': 'multipart/form-data',
-        'Authorization': '434|Dfm65OUDf601rNKg2wDW3MIyfH7VNIiizKJJslWA'
+        'Authorization': '13358|0hELCcZwjkFfnmr2cEucQsC48z5V3BPoZVjzeVyv'
       },
       connectTimeout: Duration(seconds: 5),
       receiveDataWhenStatusError: true,

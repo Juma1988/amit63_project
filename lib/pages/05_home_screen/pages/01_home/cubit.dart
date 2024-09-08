@@ -13,8 +13,8 @@ class HomeCubit extends Cubit<HomeStates> {
   Future<void> getData() async {
     final response = await dio.get('jobs');
     if (response.isSuccess) {
+      model = SuggestionData.fromJson(response.data);
       emit(HomeSuccessesState());
-      final model = SuggestionData.fromJson(response.data);
     } else {
       emit(HomeFailedState());
     }

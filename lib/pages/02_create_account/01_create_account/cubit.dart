@@ -19,7 +19,7 @@ class CreateAccountCubit extends Cubit<CreateAccountStates> {
 
   Future<void> sendDate() async {
     emit(LoadingCreateAccountState());
-    final response = await dio.post('/auth/register', data: {
+    final response = await dio.post('auth/register', data: {
       'name': userNameController.text,
       'email': emailController.text,
       'password': passwordController.text
