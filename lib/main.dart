@@ -8,6 +8,8 @@ import 'package:app/pages/05_home_screen/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'pages/99_test/view.dart';
+
 late int initScreen;
 
 Future<void> main() async {
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: "Project Amit 63",
         navigatorKey: navigatorKey,
-        home: HomePageView(),
+        home: ShoppingApp(),
         theme: lightMode,
         darkTheme: darkMode,
       ),
