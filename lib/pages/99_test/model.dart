@@ -2,7 +2,8 @@ class ProductData {
   late final List<ProductsModel> list;
 
   ProductData.fromJson(Map<String, dynamic> json) {
-    list = List.from(json['data']).map((e) => ProductsModel.fromJson(e)).toList();
+    list =
+        List.from(json['data']).map((e) => ProductsModel.fromJson(e)).toList();
   }
 }
 

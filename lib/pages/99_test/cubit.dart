@@ -7,7 +7,7 @@ import 'package:get_it/get_it.dart';
 class ShoppingAppCubit extends Cubit {
   ShoppingAppCubit() : super(ShoppingAppInitScreen()) {}
   final dio = GetIt.instance<DioHelper>();
-  late ProductData model;
+  ProductData? model;
 
   Future<void> getData() async {
     emit(ShoppingAppLoadingScreen());
