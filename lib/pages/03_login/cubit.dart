@@ -8,16 +8,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 class LoginCubit extends Cubit<LoginStates> {
-  LoginCubit() : super(LoginStates());
+  final DioHelper _dio;
+  LoginCubit(this._dio) : super(LoginStates());
 
-  final dio = GetIt.instance<DioHelper>();
   final emailController = TextEditingController(text: 'i.juma1988@gmail.com');
   final passwordController = TextEditingController(text: '123456');
   final formKey = GlobalKey<FormState>();
 
   Future<void> postData() async {
     emit(LoginLoadingState());
-    final response = await dio.post('auth/login', data: {
+    final response = await _dio.post('auth/login', data: {
       'email': emailController.text,
       'password': passwordController.text
     });

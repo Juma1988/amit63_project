@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="flutter_project_amit_63_ibrahim_juma"
+        android:label="Jobs Que"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

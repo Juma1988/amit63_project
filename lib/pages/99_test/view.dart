@@ -24,7 +24,12 @@ class _ShoppingAppState extends State<ShoppingApp> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.w),
         child: GridView.builder(
-          itemCount: cubit.model?.list.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisSpacing: 12.h,
+              crossAxisSpacing: 12.w,
+              childAspectRatio: 189.w / 300.h),
+          itemCount: 6,
           itemBuilder: (context, index) => Container(
             height: 300.h,
             width: 189.w,
@@ -47,21 +52,21 @@ class _ShoppingAppState extends State<ShoppingApp> {
                   width: 189.w,
                   height: 160.h,
                   clipBehavior: Clip.antiAlias,
-                  //child: cubit.model!.list[index];,
+                  //child:Image.network(cubit.model!.image[index])
                 ),
                 Expanded(
-                  child: Container(
-                    color: Colors.greenAccent,
+                  child: Center(
+                    child: Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      color: Colors.greenAccent,
+                      child: Text('cell number '),
+                    ),
                   ),
                 )
               ],
             ),
           ),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 12.h,
-              crossAxisSpacing: 12.w,
-              childAspectRatio: 189 / 300),
         ),
       ),
     );

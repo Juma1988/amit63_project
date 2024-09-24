@@ -1,9 +1,9 @@
-class ShoppingApp {}
+class ShoppingAppStates {}
 
-class ShoppingAppInitScreen extends ShoppingApp {}
+class ShoppingAppInitScreen extends ShoppingAppStates {}
 
-class ShoppingAppLoadingScreen extends ShoppingApp {}
+class ShoppingAppLoadingScreen extends ShoppingAppStates {}
 
-class ShoppingAppSuccessScreen extends ShoppingApp {}
+class ShoppingAppSuccessScreen extends ShoppingAppStates {}
 
-class ShoppingAppFailedScreen extends ShoppingApp {}
+class ShoppingAppFailedScreen extends ShoppingAppStates {}

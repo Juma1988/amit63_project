@@ -6,12 +6,12 @@ import 'model.dart';
 import 'states.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
-  HomeCubit() : super(HomeLoadingState());
-  final dio = GetIt.instance<DioHelper>();
+  final DioHelper _dio;
+  HomeCubit(this._dio) : super(HomeLoadingState());
   late SuggestionData model;
 
   Future<void> getData() async {
-    final response = await dio.get('jobs');
+    final response = await _dio.get('jobs');
     if (response.isSuccess) {
       model = SuggestionData.fromJson(response.data);
       emit(HomeSuccessesState());
