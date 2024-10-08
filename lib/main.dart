@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       designSize: Size(375, 812),
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Project Amit 63",
+        title: 'ProjectAmit63',
         navigatorKey: navigatorKey,
         home: ShoppingApp(),
         theme: lightMode,

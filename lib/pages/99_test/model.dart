@@ -24,21 +24,22 @@ class Data {
   late final String createdAt;
 
   Data.fromJson(Map<String, dynamic> json) {
-    categoryId = json['category_id'];
-    id = json['id'];
-    title = json['title'];
-    description = json['description'];
-    code = json['code'];
-    priceBeforeDiscount = json['price_before_discount'];
-    price = json['price'];
-    discount = json['discount'];
-    amount = json['amount'];
-    isActive = json['is_active'];
-    isFavorite = json['is_favorite'];
-    unit = Unit.fromJson(json['unit']);
-    images = List.from(json['images']).map((e) => Images.fromJson(e)).toList();
-    mainImage = json['main_image'];
-    createdAt = json['created_at'];
+    categoryId = json['category_id'] ?? 0;
+    id = json['id'] ?? 0;
+    title = json['title'] ?? '';
+    description = json['description'] ?? '';
+    code = json['code'] ?? '';
+    priceBeforeDiscount = json['price_before_discount'] ?? 0.0;
+    price = json['price'] ?? 0.0;
+    discount = json['discount'] ?? 0.0;
+    amount = json['amount'] ?? 0.0;
+    isActive = json['is_active'] = 1;
+    isFavorite = json['is_favorite'] ?? false;
+    unit = Unit.fromJson(json['unit'] ?? []);
+    images =
+        List.from(json['images'] ?? []).map((e) => Images.fromJson(e)).toList();
+    mainImage = json['main_image'] ?? '';
+    createdAt = json['created_at'] ?? '';
   }
 }
 
@@ -50,11 +51,11 @@ class Unit {
   late final String updatedAt;
 
   Unit.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    type = json['type'];
-    createdAt = json['created_at'];
-    updatedAt = json['updated_at'];
+    id = json['id'] ?? 0;
+    name = json['name'] ?? '';
+    type = json['type'] ?? '';
+    createdAt = json['created_at'] ?? '';
+    updatedAt = json['updated_at'] ?? '';
   }
 }
 
@@ -63,7 +64,7 @@ class Images {
   late final String url;
 
   Images.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    url = json['url'];
+    name = json['name'] ?? '';
+    url = json['url'] ?? '';
   }
 }
